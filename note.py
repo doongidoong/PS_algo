@@ -1,7 +1,6 @@
 n, m = map(int,input().split())
 L  = list(map(int,input().split()))
 
-cnt = 0
 
 answer=0
 for i in range(n-2):
