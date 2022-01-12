@@ -1,13 +1,14 @@
 import sys
-#sys.stdin = open("input.txt","rt")
+sys.stdin = open("input.txt","rt")
 n = int(input())
 
 
-
-def transform(num):
-    if num//2 ==0:
-        return str(num)
+def dfs(x):
+    if x==0:
+        return
     else:
-        return str(transform(num//2))+str(num%2)
+        dfs(x//2)
+        print(x%2, end= '')
 
-print(transform(n))
+
+dfs(n)
