@@ -1,24 +1,27 @@
 import sys
 
-sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
+#sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
 n,m = map(int, input().split())
 board = board=[list(map(int, input().split())) for _ in range(n)]
 
-
-def dfs(L,j):
+tot=[]
+def dfs(L,s):
     if L==m:
-        for r in res:
-            ps[r] 
-
+        sum =0
+        for h in hs:
+            dis = n*n
+            for c in cb:
+                x = h[0]-ps[c][0]
+                y = h[1]-ps[c][1]
+                dis = min(dis,abs(x)+abs(y))
+            sum+=dis
+        tot.append(sum)
         return
     else:
-        for i in range(j,len(ps)):
-            if ch[i]==0:
-                ch[i]=1
-                res[L]=i
-                dfs(L+1,i+1)
-                ch[i]=0
-
+        for i in range(s,len(ps)):
+            cb[L]=i
+            dfs(L+1,i+1)
+                
 hs =[]
 ps = []
 for i in range(n):
@@ -28,5 +31,7 @@ for i in range(n):
         elif board[i][j]==2:
             ps.append((i,j))
 ch = [0]*len(ps)
-res = [0]*m
+cb = [0]*m
 dfs(0,0)
+
+print(min(tot))
