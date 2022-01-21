@@ -1,5 +1,6 @@
 import sys
-sys.stdin = open("input.txt","rt")
+
+#sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
 
 n, m = map(int ,input().split()) #n은 노드의 개수 m은 간선의 개수
 

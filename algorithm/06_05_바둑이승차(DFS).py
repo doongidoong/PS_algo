@@ -1,5 +1,7 @@
 import sys
-#sys.stdin = open("input.txt","rt")
+
+#sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
+
 def dfs(L,sum, tsum):
     global result, total
     if (sum + (total - tsum)) < result : # 전체합 - 판단을 한 값 = 앞으로 판단해야할 무게값
