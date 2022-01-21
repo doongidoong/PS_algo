@@ -1,7 +1,9 @@
 
 import sys
 import heapq as hq
-#sys.stdin = open("input.txt","rt")
+
+#sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
+
 # 파이썬의 heapq는 최소힙을 가정함 따라서 최대힙은 코드의 수정이 약간 필요
 # 그건 바로 음수를 취해주는 것 음수를 취해주면 가장 큰수가 가장 작아지고  
 # 가장 작은 수가 가장 크게 됨. 출력할 때 다시 -1을 곱해서 출력하면 됨

@@ -1,7 +1,9 @@
 
 import sys
 import heapq as hq
-#sys.stdin = open("input.txt","rt")
+
+#sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
+
 a = [] #파이썬은 리스트를 사용하고 여기에 heappush heapop 해주면 됨
 
 while True:
