@@ -1,6 +1,6 @@
 import sys
 
-sys.stdin =  open("input.txt", "rt")
+#sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
 
 a = input()
 stack =[]
