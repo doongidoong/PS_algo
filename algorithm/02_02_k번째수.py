@@ -1,5 +1,5 @@
 import sys
-#sys.stdin = open("input.txt","rt")
+#sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
 T = int(input())
 for t in range(T):
     n, s, e, k = map(int, input().split())

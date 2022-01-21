@@ -1,6 +1,6 @@
 import sys
+#sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
 
-#sys.stdin = open("input.txt","rt")
 N = int(input())
 L = list(map(int,input().split()))
 

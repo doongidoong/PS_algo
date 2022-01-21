@@ -6,7 +6,7 @@ def digit_sum(x):
         sumd+= int(i)
     return sumd
 
-#sys.stdin = open("input.txt","rt")
+#sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
 
 N = int(input())
 L = list(map(int, input().split()))
