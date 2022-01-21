@@ -9,7 +9,7 @@ def search(a,m,lt,rt):
     else:
         return (lt+rt)//2
 
-sys.stdin = open("input.txt", "rt")
+#sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
 
 n ,m = map(int,input().split())
 a = list(map(int,input().split()))
