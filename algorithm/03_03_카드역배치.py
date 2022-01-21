@@ -3,7 +3,9 @@ def reverse(L):
     return L[::-1]
 
 
-#sys.stdin = open("input.txt","rt")
+#sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
+
+
 L = list(range(1,21))
 for i in range(10):
     a,b = map(int,input().split())
