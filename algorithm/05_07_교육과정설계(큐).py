@@ -1,7 +1,6 @@
 import sys
 from collections import deque
-#sys.stdin = open("input.txt","rt")
-
+#sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
 a = input()
 
 n = int(input())
