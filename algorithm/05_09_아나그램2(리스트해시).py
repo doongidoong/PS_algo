@@ -1,7 +1,9 @@
-#딕셔너리를 쓰지 않고 직접 해싱하는방버
+#딕셔너리를 쓰지 않고 직접 해싱하는 방법
 
 import sys
-sys.stdin = open("input.txt","rt")
+
+#sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
+
 a = input()
 b = input()
 
