@@ -1,6 +1,8 @@
 import sys
 import itertools as it
+
 #sys.stdin = open("input.txt","rt")
+
 n,f = map(int ,input().split())
 b = [1]*n
 ch = [0]* (n+1)

@@ -2,7 +2,7 @@ from email import iterators
 import sys
 import itertools as it
 
-sys.stdin = open("input.txt","rt")
+#sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
 
 n, k = map(int, input().split())
 
