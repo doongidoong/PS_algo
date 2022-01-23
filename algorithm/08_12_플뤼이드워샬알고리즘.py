@@ -1,5 +1,5 @@
 import sys
-#sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
+sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
 
 n, m = map(int,input().split())
 dis = [[5000]*(n+1) for _ in range(n+1)]
