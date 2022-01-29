@@ -1,4 +1,4 @@
-import imp
+
 import sys
 from collections import deque 
 sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\baekjoon\\input.txt","rt")
