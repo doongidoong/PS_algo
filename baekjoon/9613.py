@@ -18,8 +18,4 @@ for i in range(n):
             res+=GCD(L[i],L[j])
     print(res   )
 
-    """
-    
-    print(a)
-    """    
      
