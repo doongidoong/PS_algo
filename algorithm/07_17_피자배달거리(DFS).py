@@ -2,7 +2,7 @@ import sys
 
 #sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
 n,m = map(int, input().split())
-board = board=[list(map(int, input().split())) for _ in range(n)]
+board =[list(map(int, input().split())) for _ in range(n)]
 
 tot=[]
 def dfs(L,s):
