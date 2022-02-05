@@ -23,7 +23,7 @@ for j in range(k):
                 a = Q.popleft()
                 for i in g[a]:
                     if ch[i] == 0:
-                        ch[i] = -ch[a]
+                        ch[i] = ch[a]*2
                         Q.append(i)
                     else:
                         if ch[i] == ch[a]:
