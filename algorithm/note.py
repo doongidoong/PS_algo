@@ -1,26 +1,36 @@
+from cmath import inf
 import sys
-sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
+sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\baekjoon\\input.txt","rt")
 
-cnt =0 
-def dfs(L):
-    global cnt 
-    if L==n:
-        cnt+=1
-        return
-    else:
-        for i in range(1, n+1):
-            for j in range(L):
-                if i== res[j] or abs(i-res[j])== L-j:
-                    break
-            else:
-                res[L]=i
-                dfs(L+1)
-                
+v,e = map(int,input().split())
+start = int(input())
+g=[[] for _ in range(v+1)]
+visited =[0]*(v+1) 
+dis =[inf]*(v+1)
+for i in range(e):
+    a,b,c = map(int,input().split())
+    g[a].append((b,c))
 
+def get_smallest():
+    minval = inf
+    index = 0
+    for i in range(1,v+1):
+        if dis[i] < minval and not visited[i] :
+            minval = dis[i]
+            index= i
+    return index
 
-if __name__ =="__main__" :
-    n = int (input())
-    res =[0]*(n)
-    ch = [0]*(n+1)
-    dfs(0)
-    print(cnt)
+def dijkstra(start):
+    dis[start] =0
+    visited[start] =1 
+    for i in g[start]:
+        dis[i[0]] = i[1]
+    for i in range(v-1):
+        now = get_smallest()
+        visited[now] =1 
+        for j in g[now]:
+            dis[j[0]] = min(dis[j[0]], dis[now]+j[1])
+
+dijkstra(start)
+
+print(dis)
