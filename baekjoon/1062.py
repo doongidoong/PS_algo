@@ -15,37 +15,27 @@ if k==26:
     sys.exit(0)
 
 for i in range(n):
-    s = sys.stdin.readline().rstrip()
-    for j in s[4:len(s)-3]:
-        if check[ord(j)-97]==1:
-            continue
-        d[i].append(ord(j)-97)
-
-
+    d[i] = set(sys.stdin.readline().rstrip())
+    
 maxc = 0
-res=[]
-def DFS(L):
+
+def DFS(idx,L):
     global maxc
     if L == k-5 :
         cnt = n
         for i in range(n):
             for j in d[i]:
-                if j in res or j in (0,13,19,8,2):
-                    continue
-                else:
+                if check[ord(j)-97] == 0:
                     cnt -=1
                     break
         if maxc<cnt:
             maxc = cnt
-
         return
     else:
-        for i in range(26):
+        for i in range(idx,26):
             if check[i]==0:
-                res.append(i)
                 check[i]=1
-                DFS(L+1)
-                res.pop()
+                DFS(i,L+1)
                 check[i]=0
-DFS(0)
+DFS(0,0)
 print(maxc)
