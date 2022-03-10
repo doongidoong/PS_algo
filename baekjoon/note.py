@@ -1,10 +1,6 @@
-import sys
-sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\baekjoon\\input.txt","rt")
+l = list(map(int,input().split()))
+temp= 0
+for i in l:
+    temp+=i*i
 
-a, b = map(int ,input().split())
-plus = int(input())
-
-hour = (a+(b+plus)//60)%24
-minute = (b+plus)%60
-print(hour, minute)
-
+print(temp%(10))
