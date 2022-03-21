@@ -6,5 +6,6 @@ def solution(number, k):
             answer.pop()
             k -= 1
         answer.append(num)
-        
+    if k != 0:
+        stack = stack[:len(stack)-k]
     return ''.join(answer[:len(answer) - k])
