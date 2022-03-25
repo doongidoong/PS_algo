@@ -20,7 +20,6 @@ def solution(genres, plays):
         for i in tmp[:2]:
             answer.append(i[1])
         d[target] = 0
-    
     return answer
                 
 genres=["classic", "pop", "classic", "classic", "pop"]
