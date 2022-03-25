@@ -10,10 +10,6 @@ def solution(people, limit):
             people.pop()
         else:
             people.pop()   
-
-
-        
-
     return answer
 
 people= [70, 80, 50]	
