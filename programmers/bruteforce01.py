@@ -1,4 +1,3 @@
-
 def person1(ans):
     arr =[1,2,3,4,5]
     cnt=0
@@ -6,7 +5,6 @@ def person1(ans):
         if arr[i%5] ==ans[i]:
             cnt+=1
     return cnt
-
 def person2(ans):
     arr=[ 2, 1, 2, 3, 2, 4, 2, 5]
     cnt=0
