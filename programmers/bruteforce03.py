@@ -1,4 +1,3 @@
-
 def solution(brown, yellow):
     answer = []
     tot = brown+yellow
