@@ -7,8 +7,6 @@ def solution(citations):
         cnt +=1
     answer = cnt
     return answer
-
-
 citations=[3, 0, 6, 1, 5]
 
 print(solution(citations))
