@@ -8,7 +8,6 @@ def solution(routes):
         else:
             e=routes[i][1]
             cnt+=1
-
     answer = cnt
     return answer
 routes = [[-20,-15], [-14,-5], [-18,-13], [-5,-3]]
