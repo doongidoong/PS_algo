@@ -1,6 +1,5 @@
 from collections import Counter
 
-
 def solution(participant, completion):
     d1 = Counter(participant)
     d2 = Counter(completion)
