@@ -1,4 +1,3 @@
-
 def solution(progresses, speeds):
     stack= []
     time=0
