@@ -9,4 +9,4 @@ def solution(clohtes):
 
     return answer-1
                 
-#clohtes= [["crowmask", "face"], ["bluesunglasses", "face"], ["smoky_makeup", "face"]]
+clohtes= [["crowmask", "face"], ["bluesunglasses", "face"], ["smoky_makeup", "face"]]
