@@ -1,13 +1,9 @@
 from itertools import permutations
-s= "17"
 
 prime = [0]*(10000000)
-
-
 def solution(numbers):
     prime[0]=1
     prime[1]=1
-
     for i in range(2,4000):
         for j in range(2*i,10000000,i):
             prime[j]=1
