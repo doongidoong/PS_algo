@@ -1,26 +1,25 @@
-from cmath import inf
-
-
 def solution(m, n, puddles):
-    DFS(n-1,m-1)
-    answer = 0
-    return answer
-def DFS(x,y):
-    if dy[x][y]!=0:
-        return dy[x][y]
+    dy=[[0 for _ in range(m)] for _ in range(n)]
+    dy[0][0]=1
+    for i in puddles:
+        dy[i[1]-1][i[0]-1]=-1
+    DFS(n-1,m-1,dy)
+    print(dy)
+    return (dy[-1][-1]-2) % 1000000007
+def DFS(y,x,dy):
+    print(y,x)
+    if dy[y][x]==-1 or x<0 or y<0:
+        return 0
+    if dy[y][x]!=0:
+        return dy[y][x]
     else:
-        if x == 0 and 0<=y<m:
-            dy[x][y] = 1 + DFS(0,y-1)
-        if y == 0 and 0<=x<n:
-            dy[x][y] =1 + DFS(x-1,0)
-        else:
-            dy[x][y] = min(DFS(x-1,y),DFS(x,y-1))+1
-        return dy[x][y] 
-     
-    DFS(x+1,y)
-    DFS(x,y+1)
+        dy[y][x] = DFS(y-1,x,dy)+DFS(y,x-1,dy)
+        return dy[y][x]
+
+
 m= 4	
 n= 3	
-dy=[[0 for _ in range(m)] for _ in range(n)]
+
+
 puddles = [[2, 2]]
 solution(m,n,puddles)
