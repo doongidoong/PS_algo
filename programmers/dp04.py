@@ -25,7 +25,5 @@ def solution(money):
     answer= max(max(dy1),max(dy2))
     return answer
 
-
-
 money = [1,2,3,1,5]
 print(solution(money))
