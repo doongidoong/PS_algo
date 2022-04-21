@@ -5,7 +5,7 @@ sys.stdin = open("C:\\Users\\wlgns\\pythonprogramming\\pythonprogramming\\baekjo
 n = int(input())
 a = list(map(str, sys.stdin.readline().split()))
 check = [0 for _ in range(10)]
-answer1= '99999999999999'
+answer1= '9876543210'
 answer2= '0'
 
 def DFS(l,s,t):
@@ -32,4 +32,6 @@ for i in range(0,10):
     check[i]=1
     DFS(0,i,str(i)) 
     check[i]=0
-print(answer1,answer2)
+
+print(answer2)
+print(answer1)
