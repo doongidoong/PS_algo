@@ -1,15 +1,18 @@
 import sys
-
 sys.stdin = open("C:\\Users\\wlgns\\pythonprogramming\\pythonprogramming\\baekjoon\\input.txt","rt")
-n,m,k = map(int, input().split())
-arr= [list(map(int,input().split()) ) for _ in range(n)]
-check = [[0 for _ in range(m)] for _ in range(n)]
-visited = [[False for _ in range(m)] for _ in range(n)]
 
-dx = [0,0,1,-1]
-dy = [1,-1,0,0]
+input = sys.stdin.readline
 
-answer = 0
+
+n, m, k = map(int, input().split())
+arr = [list(map(int, input().split())) for _ in range(n)]
+visited = [[0] * m for _ in range(n)]
+
+dx = [0, 0, 1, -1]
+dy = [1, -1, 0, 0]
+
+answer = -1000000
+
 def go(px, py, index, sum):
     if index == k:
         global answer
@@ -19,8 +22,8 @@ def go(px, py, index, sum):
         
         return
 
-    for x in range(0, n):
-        for y in range(0, m):
+    for x in range(px, n):
+        for y in range(py if x==px else 0, m):
             # 현재 위치 방문했었는지 확인
             if visited[x][y]:
                 continue
@@ -36,9 +39,11 @@ def go(px, py, index, sum):
                         ok = False            
             # 방문
             if ok:
-                visited[x][y] = True
+                visited[x][y] = 1
                 go(x, y, index+1, sum+arr[x][y])
-                visited[x][y] = False
+                visited[x][y] = 0
 
-go(0,0,0,0)
+
+go(0, 0, 0, 0)
+
 print(answer)
