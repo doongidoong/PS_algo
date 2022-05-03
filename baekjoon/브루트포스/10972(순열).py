@@ -1,30 +1,17 @@
-from cmath import inf
 import sys
-from collections import defaultdict
-sys.setrecursionlimit(10**9)
-sys.stdin = open("C:\\Users\\wlgns\\pythonprogramming\\pythonprogramming\\baekjoon\\input.txt","rt")
-n= int(input())
-a = list(sys.stdin.readline().split())
-s=''.join(a)
-check = [0]*(n+1)
+#sys.stdin = open("C:\\Users\\wlgns\\pythonprogramming\\pythonprogramming\\baekjoon\\input.txt","rt")
 
-ans = inf
-def DFS(L,t):
-    global ans
-    if t[:len(t)]<s[:len(t)]:
-        return
-    if L==n:
-        if ans>int(t) and t>s:
-            ans=int(t)
-        return
-    for i in range(1,n+1):
-        if check[i]==0:
-            check[i]=1
-            DFS(L+1,t+str(i))
-            check[i]=0
-DFS(0,'')
-if ans == inf:
-    print(-1)
-    
-else:
-    print(ans)
+input = sys.stdin.readline
+n = int(input())
+data = list(map(int,input().split()))
+
+for i in range(n-1,0,-1):
+    if data[i-1]<data[i]:
+        for j in range(n-1,0,-1):
+            if data[i-1]<data[j]:
+               data[i-1], data[j] =data[j],data[i-1]
+               ans = data[:i] + sorted(data[i:])
+               print(*ans)
+               sys.exit(0)
+
+print(-1)
