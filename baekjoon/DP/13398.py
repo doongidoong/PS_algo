@@ -16,6 +16,7 @@ for i in range(1,n):
         dp2[i]= dp[i-1]
 
 ret= max(max(dp),max(dp2))
+
 if ret==0:
     print(max(L))
 else:
