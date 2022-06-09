@@ -2,13 +2,12 @@ from cmath import inf
 import sys
 import heapq 
 
-sys.stdin = open("C:\\Users\\wlgns\\pythonprogramming\\pythonprogramming\\baekjoon\\input.txt","rt")
+#sys.stdin = open("C:\\Users\\wlgns\\pythonprogramming\\pythonprogramming\\baekjoon\\input.txt","rt")
 n,k = map(int, input().split())
 Q = [] 
-
 heapq.heappush(Q,(0,n))
 dist = [inf]*200001
-    while Q:
+while Q:
     now = heapq.heappop(Q)
     if now[1]==k:
         print(now[0])
