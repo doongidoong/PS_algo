@@ -15,4 +15,4 @@ def solution(s):
         
     return int(answer)
 
-print(solution("1zerotwozero3"))
+solution("1zerotwozero3")
