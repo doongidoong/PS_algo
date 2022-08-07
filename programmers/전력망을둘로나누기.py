@@ -1,27 +1,61 @@
 
-parent=[]
-def solution(n, wires):
-    parent = [-1]*n
-    for a,b in wires:
-        union(a,b,parent)
-    
-def find(x,parent):
-    if parent[x]< 0:
-        return x
-    parent[x] = find(x,parent)
-    return parent[x]
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+uf = []
 
-def union(x, y,parent):
-    x = find(x,parent) #x와 y의 루트노드를 찾아준다.
-    y = find(y,parent)
-    if x == y: #루드가 같다면 합칠 필요가 없으니 종료
-        return
-    if parent[x] < parent[y] :#x의 부모를 y로 만들어 합쳐주기
-        parent[x] += parent[y]
-        parent[y] =x
-    else:
-        parent[y] += parent[x]
-        parent[x] =y
-n= 9
-wires = [[1,3],[2,3],[3,4],[4,5],[4,6],[4,7],[7,8],[7,9]]
-solution(n,wires)
+def find(a):
+    global uf
+    if uf[a] < 0: return a
+    uf[a] = find(uf[a])
+    return uf[a]
+
+def merge(a, b):
+    global uf
+    pa = find(a)
+    pb = find(b)
+    if pa == pb: return
+    uf[pa] += uf[pb]
+    uf[pb] = pa
+
+def solution(n, wires):
+    global uf
+    answer = int(1e9)
+    k = len(wires)
+    for i in range(k):
+        uf = [-1 for _ in range(n+1)]
+        tmp = [wires[x] for x in range(k) if x != i]
+        for a, b in tmp: merge(a, b)
+        v = [x for x in uf[1:] if x < 0]
+        answer = min(answer, abs(v[0]-v[1]))
+
+    return answer
+
+n= 4
+wires = [[1,2],[2,3],[3,4]]
+print(solution(n,wires))
