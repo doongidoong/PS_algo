@@ -1,11 +1,10 @@
 def solution(name):
     answer = 0
     
-    num_list = [min(abs(ord('A')-ord(n)), 26-abs(ord('A')-ord(n))) for n in name]
-    #상하로 갯수 미리 세서 걍 다 더해놓기.
-    answer += sum(num_list)
-    min_move = len(name) - 1
+    for n in name :
+        answer += min(abs(ord('A')-ord(n)), 26-abs(ord('A')-ord(n)))     #상하로 갯수 미리 세서 걍 다 더해놓기.
     
+    min_move = len(name) - 1
     for i, c in enumerate(name):
         
         next_i = i+1
