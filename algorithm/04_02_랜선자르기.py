@@ -1,24 +1,32 @@
 import sys
-#sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
+sys.stdin = open("C:\\Users\\wlgns\\pythonprogramming\\algorithm\\input.txt","r")
 
-def count(len):
-    cnt =0
-    for i in L:
-       cnt += i//mid
+
+def solution(k,n,wires):
+    lt =  0
+    rt  = max(wires)
+    answer = 0
+    while lt <= rt:
+        mid = (lt+rt) //2
+        cnt = count(wires, mid)
+        if cnt < n :        
+            rt  = mid -1
+        else:
+            lt = mid + 1
+            answer = mid
+    print(answer)
+    return
+
+
+def count(wires ,length) :
+    cnt = 0
+    for wire in wires:
+        cnt += wire//length
     return cnt
-n,m = map(int, input().split())
-L = [int(input()) for i in range(n)]
+k , n = map(int,input().split())
+wires = []
+for i in range(k):
+    wire = int(input())
+    wires.append(wire)
 
-rt = max(L)
-lt = 0
-res = 0
-while(lt<=rt):
-    mid = (lt+rt)//2
-    if count(mid) >= m:
-        lt = mid +1
-        res = mid
-    else :
-        rt = mid-1
-
-print(res)
-
+solution(k,n,wires)
