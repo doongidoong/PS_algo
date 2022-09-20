@@ -1,25 +1,19 @@
 import sys
 
-#sys.stdin = open("C:\\Users\\82103\\pythonprogramming\\algorithm\\input.txt","r")
+#sys.stdin = open("C:\\Users\\wlgns\\pythonprogramming\\algorithm\\input.txt","rt")
 
-N = int(input())
-
-for i in range(N):
-    a = input()
-    a = a.lower()
-    size =len(a)
-    for j in range(size//2):
-        if a[j]!=a[size-j-1]:
-            print("#%d NO"%(i+1))
+n = int(input())
+for i in range(n):
+    s = sys.stdin.readline().strip().lower()
+    lt =0
+    rt = len(s)-1
+    flag = "YES"
+    while lt<rt:
+        a = s[lt]
+        b = s[rt]
+        if a!=b:
+            flag= "NO"
             break
-    else:
-        print("#%d YES"%(i+1))
-"""   
-for i in range(N):
-    a = input()
-    a = a.lower()
-    if a== a[::-1]:
-        print("#%d YES"%(i+1))
-    else:
-        print("#%d NO"%(i+1))
-"""
+        lt +=1
+        rt -=1
+    print("#{} {}".format(i+1,flag))
