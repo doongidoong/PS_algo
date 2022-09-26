@@ -11,4 +11,11 @@ while lt<=rt:
         break
 
 
-
+def lower_bound(begin, end, target_list, target):
+    if begin >= end:
+        return begin    
+    mid = (begin + end) // 2
+    if target_list[mid] >= target:
+        return lower_bound(begin, mid, target_list, target)
+    else:
+        return lower_bound(mid+1, end, target_list, target)
