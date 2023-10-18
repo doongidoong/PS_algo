@@ -5,6 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "완주하지못한선수",
+            "request": "launch",
+            "mainClass": "완주하지못한선수",
+            "projectName": "PS_algo_849722e2"
+        },
+        {
+            "type": "java",
+            "name": "Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "PS_algo_849722e2"
+        },
+        {
             "name": "Python: 현재 파일",
             "type": "python",
             "request": "launch",
