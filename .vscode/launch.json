@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "전화번호목록",
+            "request": "launch",
+            "mainClass": "전화번호목록",
+            "projectName": "PS_algo_a72978f3"
+        },
+        {
+            "type": "java",
+            "name": "완주하지못한선수",
+            "request": "launch",
+            "mainClass": "완주하지못한선수",
+            "projectName": "PS_algo_a72978f3"
+        },
+        {
+            "type": "java",
+            "name": "폰켓몬",
+            "request": "launch",
+            "mainClass": "폰켓몬",
+            "projectName": "PS_algo_a72978f3"
+        },
+        {
+            "type": "java",
             "name": "완주하지못한선수",
             "request": "launch",
             "mainClass": "완주하지못한선수",

@@ -13,7 +13,7 @@ public class 폰켓몬 {
         return answer;
     }
 
-    public static void main(String[] args) throws IOException {
-        System.out.println(solution(new int[]{3, 1, 2, 3}));
-    }
+    // public static void main(String[] args) throws IOException {
+    //     System.out.println(solution(new int[]{3, 1, 2, 3}));
+    // }
 }
