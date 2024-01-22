@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "기능개발",
+            "request": "launch",
+            "mainClass": "기능개발",
+            "projectName": "PS_algo_a72978f3"
+        },
+        {
+            "type": "java",
+            "name": "베스트앨범",
+            "request": "launch",
+            "mainClass": "베스트앨범",
+            "projectName": "PS_algo_a72978f3"
+        },
+        {
+            "type": "java",
+            "name": "BestAlbum",
+            "request": "launch",
+            "mainClass": "BestAlbum",
+            "projectName": "PS_algo_a72978f3"
+        },
+        {
+            "type": "java",
             "name": "전화번호목록",
             "request": "launch",
             "mainClass": "전화번호목록",
